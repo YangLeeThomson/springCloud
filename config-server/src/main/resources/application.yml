@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #          uri: https://github.com/mapiconfig/properties.git
+          #          username: mapiconfig
+          #          password: mapiadmin123
+          uri: http://liyang9@gitlab.bitautotech.com/WP/Mobile/SERVER/mapi-config-properties.git
+          username: liyang9
+          password: yanglee&1
+          search-paths:
+          - '{application}'
+#          basedir: D:/workspace001/config-server/basedir
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
